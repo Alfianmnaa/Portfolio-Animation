@@ -1,4 +1,5 @@
 import "./App.css";
+import About from "./components/About/About";
 import Hero from "./components/Hero/Hero";
 import Navbar from "./components/Navbar/Navbar";
 import Parallax from "./components/Parallax/Parallax";
@@ -13,7 +14,9 @@ function App() {
       <section>
         <Parallax type="about" />
       </section>
-      <section id="AboutMe">Tentang</section>
+      <section id="AboutMe">
+        <About />
+      </section>
       <section>
         <Parallax type="skills" />
       </section>
