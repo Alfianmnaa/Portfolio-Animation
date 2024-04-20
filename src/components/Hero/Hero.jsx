@@ -66,7 +66,7 @@ const Hero = () => {
     <div style={styles}>
       <div className="md:px-26 px-12 flex flex-wrap gap-4 justify-between items-center mx-auto max-w-[1336px] h-full relative">
         <motion.div variants={textVariants} initial="initial" animate="animate" className="">
-          <motion.h3 className="text-2xl tracking-[10px] text-purple-800 font-bold leading-normal lg:mb-6 sm:mb-2 mb-0" variants={textVariants}>
+          <motion.h3 className="text-2xl tracking-[10px] text-[#C58167] font-bold leading-normal lg:mb-6 sm:mb-2 mb-0" variants={textVariants}>
             ALFIAN MAULANA
           </motion.h3>
           <motion.h6 className="text-6xl leading-normal font-extrabold mb-4" variants={textVariants}>
