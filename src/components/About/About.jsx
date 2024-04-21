@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <div className="h-full">
-      <div className="md:px-26 px-12 my-12 flex-wrap mx-auto max-w-[1336px] h-full flex justify-between items-center ">
+    <div className="h-full overflow-hidden">
+      <div className="md:px-26 px-12  flex-wrap mx-auto max-w-[1336px] h-full flex justify-between items-center ">
         <motion.img
           src={aboutImg}
           alt="aboutImg"

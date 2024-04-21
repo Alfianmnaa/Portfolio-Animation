@@ -9,16 +9,18 @@ import License from "./License";
 const SkillsLicense = () => {
   const [skillsCondition, setSkillsCondition] = useState(false);
   return (
-    <div className="h-full flex justify-center items-start  ">
-      <div className="md:px-26 px-12 mt-28 max-w-[1336px] ">
-        <div className="flex gap-16 cursor-pointer">
-          <div className="flex justify-center items-center gap-4 " onClick={() => setSkillsCondition(false)}>
-            {skillsCondition ? <img src={internetIcon} alt="internetIcon" className="w-12 " /> : <img src={internetIconActive} alt="internetIcon" className="w-12 " />}
-            <p className={`font-bold text-subheadline ${skillsCondition ? "text-inherit" : "text-[#F99D1B]"}`}>Skills</p>
-          </div>
-          <div className="flex justify-center items-center gap-4 " onClick={() => setSkillsCondition(true)}>
-            {skillsCondition ? <img src={licenseIconActive} alt="internetIcon" className="w-12 " /> : <img src={licenseIcon} alt="licenseIcon" className="w-12 " />}
-            <p className={`font-bold text-subheadline ${skillsCondition ? "text-[#F99D1B]" : "text-inherit"}`}>License</p>
+    <div className="h-full lg:overflow-hidden overflow-y-scroll  ">
+      <div className="max-w-[1336px] mx-auto ">
+        <div className="md:px-26 px-12 lg:pt-16 pt-24 md:mb-20 mb-10 max-w-[400px] mx-auto ">
+          <div className="flex gap-12 justify-between cursor-pointer ">
+            <div className="flex justify-center items-center gap-4" onClick={() => setSkillsCondition(false)}>
+              {skillsCondition ? <img src={internetIcon} alt="internetIcon" className="md:w-12 w-10 " /> : <img src={internetIconActive} alt="internetIcon" className="md:w-12 w-10 " />}
+              <p className={`font-bold md:text-subheadline text-body ${skillsCondition ? "text-inherit" : "text-[#F99D1B]"}`}>Skills</p>
+            </div>
+            <div className="flex justify-center items-center gap-4 " onClick={() => setSkillsCondition(true)}>
+              {skillsCondition ? <img src={licenseIconActive} alt="internetIcon" className="md:w-12 w-10 " /> : <img src={licenseIcon} alt="licenseIcon" className="md:w-12 w-10 " />}
+              <p className={`font-bold md:text-subheadline text-body ${skillsCondition ? "text-[#F99D1B]" : "text-inherit"}`}>License</p>
+            </div>
           </div>
         </div>
         {skillsCondition ? <License /> : <Skills />}
