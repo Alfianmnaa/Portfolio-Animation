@@ -9,9 +9,9 @@ import License from "./License";
 const SkillsLicense = () => {
   const [skillsCondition, setSkillsCondition] = useState(false);
   return (
-    <div className="h-full lg:overflow-hidden overflow-y-scroll  ">
+    <div className="h-full 2xl:overflow-hidden overflow-y-scroll  ">
       <div className="max-w-[1336px] mx-auto ">
-        <div className="md:px-26 px-12 lg:pt-16 pt-24 md:mb-20 mb-10 max-w-[400px] mx-auto ">
+        <div className="md:px-26 px-12 lg:pt-16 pt-24 mb-10 max-w-[400px] mx-auto ">
           <div className="flex gap-12 justify-between cursor-pointer ">
             <div className="flex justify-center items-center gap-4" onClick={() => setSkillsCondition(false)}>
               {skillsCondition ? <img src={internetIcon} alt="internetIcon" className="md:w-12 w-10 " /> : <img src={internetIconActive} alt="internetIcon" className="md:w-12 w-10 " />}
