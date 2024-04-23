@@ -39,7 +39,7 @@ const Skills = () => {
       </div>
       <motion.div whileInView={{ x: 0, opacity: 1 }} style={{ x: 100, opacity: 0 }} transition={{ duration: 0.3, delay: 0.2 }} className="border-t-[1px] border-[#CBD5E1]">
         <br />
-        <h2 className="md:text-4xl text-3xl leading-normal font-extrabold ">Softaware & Tools</h2>
+        <h2 className="md:text-4xl text-3xl leading-normal font-extrabold ">Software & Tools</h2>
         <div className="mt-6 flex flex-wrap gap-2 max-w-[520px] ">
           {SoftwareTools.map((softwareTool, index) => {
             return (
