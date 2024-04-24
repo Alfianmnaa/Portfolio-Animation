@@ -24,7 +24,7 @@ const License = () => {
               </div>
               <p className="text-[#27274e] my-2">Certification on deep understanding or concepts of Javascript from one of the best bootcamps in Indonesia. </p>
               <div className="flex justify-end">
-                <button className="flex bg-orange-500 items-center  gap-2 py-3 px-4 bg-transparent  font-light rounded-md text-white">
+                <button className="flex bg-orange-400 items-center  gap-2 py-3 px-4 bg-transparent  font-light rounded-md text-white">
                   <span>See Credentials</span>
                   <img src={medalIcon} alt="dicoding" className="md:w-9 w-7 " />
                 </button>
