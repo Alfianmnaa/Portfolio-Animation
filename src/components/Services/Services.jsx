@@ -103,8 +103,8 @@ const Services = () => {
                     {selectedService &&
                       selectedService.offers.map((offer, index) => (
                         <div className="flex items-center gap-6 mb-6" key={index}>
-                          <img src={checkMarkIcon} alt="checkMarkIcon" className="w-8" />
-                          <p className="text-body">{offer}</p>
+                          <img src={checkMarkIcon} alt="checkMarkIcon" className="sm:w-8 w-6" />
+                          <p className="sm:text-body text-normal">{offer}</p>
                         </div>
                       ))}
                   </div>

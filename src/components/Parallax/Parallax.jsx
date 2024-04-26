@@ -45,9 +45,12 @@ const Parallax = ({ type }) => {
             What I did?
           </motion.h1>
         )}
-        <motion.div className="mountain bg-cover w-full h-full absolute bg-bottom z-30" style={{ backgroundImage: `url(${mountainImg})` }}></motion.div>
-        <motion.div className="planets bg-cover w-full h-full absolute bg-bottom z-20" style={{ ...{ y: yBg }, backgroundImage: `url(${type === "skills" || type === "portfolio" ? planetsImg : sunImg})` }}></motion.div>
-        <motion.div className="stars bg-cover w-full h-full absolute bg-bottom z-10" style={{ ...{ x: yBg }, backgroundImage: `url(${starsImg})` }}></motion.div>
+        <motion.div className="mountain sm:bg-cover bg-contain bg-no-repeat w-full h-full absolute bg-bottom z-30" style={{ backgroundImage: `url(${mountainImg})` }}></motion.div>
+        <motion.div
+          className="planets sm:bg-cover bg-contain bg-no-repeat w-full h-full absolute bg-bottom z-20"
+          style={{ ...{ y: yBg }, backgroundImage: `url(${type === "skills" || type === "portfolio" ? planetsImg : sunImg})` }}
+        ></motion.div>
+        <motion.div className="stars bg-cover bg-no-repeat w-full h-full absolute bg-bottom z-10" style={{ ...{ x: yBg }, backgroundImage: `url(${starsImg})` }}></motion.div>
       </div>
     </div>
   );
