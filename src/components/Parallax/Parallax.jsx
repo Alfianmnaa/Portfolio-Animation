@@ -26,22 +26,22 @@ const Parallax = ({ type }) => {
     <div>
       <div style={style} ref={ref} className="relative overflow-hidden flex justify-center items-center">
         {type == "about" && (
-          <motion.h1 style={{ y: yText }} className="md:text-headline1 text-headline2  font-bold  ">
+          <motion.h1 style={{ y: yText }} className="md:text-headline1 sm:text-headline2 text-[54px] px-2  font-bold  ">
             About Me
           </motion.h1>
         )}
         {type == "skills" && (
-          <motion.h1 style={{ y: yText }} className="md:text-headline1 text-headline2 p-6 font-bold  ">
+          <motion.h1 style={{ y: yText }} className="md:text-headline1 sm:text-headline2 text-[54px]  p-6 font-bold  ">
             Skills and Licenses
           </motion.h1>
         )}
         {type == "services" && (
-          <motion.h1 style={{ y: yText }} className="md:text-headline1 text-headline2  font-bold  ">
+          <motion.h1 style={{ y: yText }} className="md:text-headline1 sm:text-headline2 text-[54px] px-2  font-bold  ">
             What I Do?
           </motion.h1>
         )}
         {type == "portfolio" && (
-          <motion.h1 style={{ y: yText }} className="md:text-headline1 text-headline2  font-bold  ">
+          <motion.h1 style={{ y: yText }} className="md:text-headline1 sm:text-headline2 text-[54px] px-2  font-bold  ">
             What I did?
           </motion.h1>
         )}
