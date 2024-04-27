@@ -1,5 +1,6 @@
 import "./App.css";
 import About from "./components/About/About";
+import Contact from "./components/Contact/Contact";
 import Hero from "./components/Hero/Hero";
 import Navbar from "./components/Navbar/Navbar";
 import Parallax from "./components/Parallax/Parallax";
@@ -39,7 +40,9 @@ function App() {
       {/* <section id="Portfolio">Portfolio1</section>
       <section>Portfolio2</section>
       <section>Portfolio3</section> */}
-      <section id="Kontak">Contact</section>
+      <section id="Kontak">
+        <Contact />
+      </section>
     </>
   );
 }
