@@ -39,26 +39,26 @@ const Contact = () => {
   };
 
   return (
-    <motion.div ref={ref} className="h-full max-width-[1336px] m-auto flex items-center gap-12" variants={variants} initial="initial" whileInView="animate">
-      <motion.div className="flex-1 flex flex-col gap-10" variants={variants}>
-        <motion.h1 variants={variants} className="text-headline1 leading-[88px]">
+    <motion.div ref={ref} className="h-full max-w-[1336px] md:w-auto w-full md:p-0 p-3 flex items-center md:gap-12 gap-6 md:flex-row flex-col m-auto " variants={variants} initial="initial" whileInView="animate">
+      <motion.div className="flex-1 flex flex-col md:gap-10 gap-5 md:text-start text-center md:items-start items-center md:mt-0 mt-16" variants={variants}>
+        <motion.h1 variants={variants} className="md:text-headline1 text-4xl md:leading-[88px] leading-normal font-extrabold md:w-auto w-[200px]">
           Let’s work together
         </motion.h1>
         <motion.div className="item" variants={variants}>
-          <h2>Mail</h2>
-          <span className="font-light">hello@react.dev</span>
+          <h2 className="font-bold">Mail</h2>
+          <span className="font-light">alfianmna@gmail.com</span>
         </motion.div>
         <motion.div className="item" variants={variants}>
-          <h2>Address</h2>
-          <span className="font-light">Hello street New York</span>
+          <h2 className="font-bold">Instagram</h2>
+          <span className="font-light">@alfianmnaa</span>
         </motion.div>
         <motion.div className="item" variants={variants}>
-          <h2>Phone</h2>
-          <span className="font-light">+1 234 5678</span>
+          <h2 className="font-bold">Phone</h2>
+          <span className="font-light">+6281326022762</span>
         </motion.div>
       </motion.div>
-      <div className="flex-1 relative">
-        <motion.div className="phoneSvg stroke-orange-400 absolute m-auto -z-10" initial={{ opacity: 1 }} whileInView={{ opacity: 0 }} transition={{ delay: 3, duration: 1 }}>
+      <div className="phonesvg overflow-hidden flex-1 relative md:p-0 px-6 md:w-auto w-full">
+        <motion.div className=" stroke-orange-400 absolute m-auto -z-10" initial={{ opacity: 1 }} whileInView={{ opacity: 0 }} transition={{ delay: 3, duration: 1 }}>
           <svg width="450px" height="450px" viewBox="0 0 32.666 32.666">
             <motion.path
               strokeWidth={0.2}
@@ -83,10 +83,10 @@ const Contact = () => {
           </svg>
         </motion.div>
         <motion.form ref={formRef} onSubmit={sendEmail} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ delay: 4, duration: 1 }} className="flex flex-col gap-5">
-          <input type="text" required placeholder="Name" name="name" className="p-5 bg-transparent border-[1px] border-white text-white rounded-md" />
-          <input type="email" required placeholder="Email" name="email" className="p-5 bg-transparent border-[1px] border-white text-white rounded-md" />
-          <textarea rows={8} placeholder="Message" name="message" className="p-5 bg-transparent border-[1px] border-white text-white rounded-md" />
-          <button className="p-5 border-none bg-orange-400 cursor-pointer font-medium">Submit</button>
+          <input type="text" required placeholder="Name" name="name" className="md:p-4 p-3 bg-transparent border-[1px] border-white text-white rounded-md" />
+          <input type="email" required placeholder="Email" name="email" className="md:p-4 p-3 bg-transparent border-[1px] border-white text-white rounded-md" />
+          <textarea placeholder="Message" name="message" className="md:p-4 p-3 bg-transparent border-[1px] border-white text-white rounded-md md:rows-8 rows-6" />
+          <button className="md:p-4 p-3 text-black border-none bg-orange-400 cursor-pointer font-medium rounded-md">Submit</button>
           {error && "Error"}
           {success && "Success"}
         </motion.form>

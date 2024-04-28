@@ -39,7 +39,7 @@ const items = [
     id: 5,
     title: "Ecotection",
     img: P5,
-    desc: "Ecotection is a platform established with the aim to care for and protect Indonesia's natural environment through the use of technology and active participation from various communities. The website won a national competition in Indonesia and was built using MERN architecture with excellent UI&UX.",
+    desc: "Ecotection is a platform to care and protect Indonesia's natural environment and earth through the use of technology and active community participation. The website won a national competition in Indonesia and was built using MERN architecture with excellent UI&UX.",
     url: "https://ecotection.netlify.app/",
   },
 ];

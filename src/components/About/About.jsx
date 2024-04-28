@@ -15,19 +15,19 @@ const About = () => {
           transition={{ duration: 0.3, delay: 0.2 }}
         />
         <motion.div className="max-w-[600px]" whileInView={{ x: 0, opacity: 1 }} style={{ x: 100, opacity: 0 }} transition={{ duration: 0.3, delay: 0.2 }}>
-          <h4 className="text-5xl font-bold mb-2">About Me</h4>
+          <h4 className="md:text-5xl text-[40px] font-bold mb-2">About Me</h4>
           <div className="border-[1px] border-white leading-none w-28"></div>
           <br />
           <p className="text-body">Web developer, with extensive knowledge and years of experience, working in web technologies and UI / UX design, delivering quality work.</p>
           <br />
           <div className="flex gap-4">
             <div className="text-center">
-              <h3 className="text-5xl text-[#F4AEA7] font-extrabold mb-2">2+</h3>
-              <p className="tracking-widest">Years Experience</p>
+              <h3 className="md:text-5xl text-4xl text-[#F4AEA7] font-extrabold mb-2">2+</h3>
+              <p className="tracking-widest md:text-normal text-smallText">Years Experience</p>
             </div>
             <div className="text-center">
-              <h3 className="text-5xl text-[#F4AEA7] font-extrabold mb-2">10+</h3>
-              <p className="tracking-widest">Completed Projects</p>
+              <h3 className="md:text-5xl text-4xl text-[#F4AEA7] font-extrabold mb-2">10+</h3>
+              <p className="tracking-widest md:text-normal text-smallText">Completed Projects</p>
             </div>
           </div>
           <br />
