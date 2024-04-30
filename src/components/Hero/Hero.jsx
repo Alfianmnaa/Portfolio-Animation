@@ -77,7 +77,7 @@ const Hero = () => {
               See the latest work
             </motion.button>
           </a>
-          <a href="#Kontak" className="z-40">
+          <a href="#Contact" className="z-40">
             <motion.button className="md:px-5 md:py-4 px-4 py-3 md:text-normal text-smallText rounded-lg bg-transparent border-[1px] border-white cursor-pointer" variants={textVariants}>
               Contact me
             </motion.button>

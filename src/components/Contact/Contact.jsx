@@ -36,10 +36,10 @@ const Contact = () => {
       }
     );
   };
-  const rows = innerWidth > 768 ? 8 : 4;
+  const rows = innerWidth > 768 ? 8 : 3;
   return (
     <motion.div ref={ref} className="h-full max-w-[1336px] md:w-auto w-full md:p-0 p-3 flex items-center md:gap-12 gap-6 md:flex-row flex-col m-auto " variants={variants} initial="initial" whileInView="animate">
-      <motion.div className="flex-1 flex flex-col md:gap-10 gap-5 md:text-start text-center md:items-start items-center md:mt-0 mt-16" variants={variants}>
+      <motion.div className="flex-1 flex flex-col md:gap-10 gap-5 md:text-start text-center md:items-start items-center md:mt-0 mt-10" variants={variants}>
         <motion.h1 variants={variants} className="md:text-headline1 text-4xl md:leading-[88px] leading-normal font-extrabold md:w-auto w-[200px]">
           Let’s work together
         </motion.h1>

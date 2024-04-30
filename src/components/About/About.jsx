@@ -19,7 +19,7 @@ const About = () => {
           <h4 className="md:text-5xl text-[40px] font-bold mb-2">About Me</h4>
           <div className="border-[1px] border-white leading-none w-28"></div>
           <br />
-          <p className="text-body">Web developer, with extensive knowledge and years of experience, working in web technologies and UI / UX design, delivering quality work.</p>
+          <p className="md:text-body text-normal">Web developer, with extensive knowledge and years of experience, working in web technologies and UI / UX design, delivering quality work.</p>
           <br />
           <div className="flex gap-4">
             <div className="text-center">

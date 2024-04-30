@@ -51,7 +51,7 @@ const Single = ({ item }) => {
 
   return (
     <section>
-      <div className="flex justify-center items-center w-full h-full overflow-hidden">
+      <div className="flex justify-center items-center w-full h-full overflow-hidden z-30">
         <div className="max-w-[1336px] h-full m-auto flex sm:flex-row flex-col justify-center items-center sm:gap-12 gap-8 sm:p-0 p-6">
           <div className="flex-1 sm:h-1/2 h-full" ref={ref}>
             <img src={item.img} alt="" className="w-full h-full sm:object-cover object-contain" />
@@ -104,7 +104,7 @@ const Portfolio = () => {
   return (
     <div className="relative" ref={ref}>
       <div className="sticky top-0 left-0  text-center text-orange-400 text-4xl " style={styles}>
-        <h1 className="md:text-[70px] text-[40px] font-extrabold sm:leading-none leading-snug"> Featured Works</h1>
+        <h1 className="md:text-[70px] text-[40px] font-extrabold sm:leading-none leading-snug z-50"> Featured Works</h1>
         <motion.div style={{ scaleX }} className="h-[10px] sm:mt-5 mt-1 bg-white"></motion.div>
       </div>
       {items.map((item) => (
