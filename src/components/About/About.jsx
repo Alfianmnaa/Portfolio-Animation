@@ -1,6 +1,7 @@
 import React from "react";
 import aboutImg from "../../assets/about/about.png";
 import { motion } from "framer-motion";
+import cv from "../../assets/about/ALFIAN MAULANA - CV (2).pdf";
 
 const About = () => {
   return (
@@ -31,7 +32,9 @@ const About = () => {
             </div>
           </div>
           <br />
-          <button className="px-5 py-4 text-normal rounded-lg bg-transparent border-[1px] border-white font-bold">Donwload CV</button>
+          <a download href={cv}>
+            <button className="px-5 py-4 text-normal rounded-lg bg-transparent border-[1px] border-white font-bold">Donwload CV</button>
+          </a>
         </motion.div>
       </div>
     </div>

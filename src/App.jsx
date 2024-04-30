@@ -33,14 +33,11 @@ function App() {
       <section id="Services">
         <Services />
       </section>
-      <section>
+      <section id="Portfolio">
         <Parallax type="portfolio" />
       </section>
       <Portfolio />
-      {/* <section id="Portfolio">Portfolio1</section>
-      <section>Portfolio2</section>
-      <section>Portfolio3</section> */}
-      <section id="Kontak">
+      <section id="Contact">
         <Contact />
       </section>
     </>

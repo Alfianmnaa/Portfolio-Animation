@@ -65,27 +65,37 @@ const Hero = () => {
   return (
     <div style={styles}>
       <div className="md:px-26 px-12 flex flex-wrap gap-4 justify-between items-center mx-auto max-w-[1336px] h-full relative">
-        <motion.div variants={textVariants} initial="initial" animate="animate" className="">
+        <motion.div variants={textVariants} initial="initial" animate="animate" className="z-40">
           <motion.h3 className="text-2xl tracking-[10px] text-[#C58167] font-bold leading-normal lg:mb-6 sm:mb-2 mb-0" variants={textVariants}>
             ALFIAN MAULANA
           </motion.h3>
           <motion.h6 className="text-6xl leading-normal font-extrabold mb-4" variants={textVariants}>
             Frontend Developer
           </motion.h6>
-          <motion.button className="md:px-5 md:py-4 px-4 py-3 md:text-normal text-smallText rounded-lg bg-transparent border-[1px] border-white md:mr-6 mr-3 " variants={textVariants}>
-            See the latest work
-          </motion.button>
-          <motion.button className="md:px-5 md:py-4 px-4 py-3 md:text-normal text-smallText rounded-lg bg-transparent border-[1px] border-white" variants={textVariants}>
-            Contact me
-          </motion.button>
+          <a href="#Portfolio" className="z-40">
+            <motion.button className="md:px-5 md:py-4 px-4 py-3 md:text-normal text-smallText rounded-lg bg-transparent border-[1px] border-white md:mr-6 mr-3 cursor-pointer" variants={textVariants}>
+              See the latest work
+            </motion.button>
+          </a>
+          <a href="#Kontak" className="z-40">
+            <motion.button className="md:px-5 md:py-4 px-4 py-3 md:text-normal text-smallText rounded-lg bg-transparent border-[1px] border-white cursor-pointer" variants={textVariants}>
+              Contact me
+            </motion.button>
+          </a>
           <motion.img src={scrollIcon} variants={textVariants} animate="scrollButton" alt="scroll" className="mt-6" />
         </motion.div>
         <>
           <img src={myPic} alt="mypic" className="z-40 max-w-full max-h-full object-cover" />
           <motion.div variants={socialMediaVariants} initial="initial" animate="animate" className="md:flex hidden flex-col gap-3 ">
-            <motion.img variants={socialMediaVariants} src={Linkedin} alt="Linkedinlogo" className="md:w-9 w-6" />
-            <motion.img variants={socialMediaVariants} src={IGLogo} alt="Instagramlogo" className="md:w-9 w-6" />
-            <motion.img variants={socialMediaVariants} src={TiktokLogo} alt="Tiktoklogo" className="md:w-9 w-6" />
+            <motion.a variants={socialMediaVariants} href="https://www.linkedin.com/in/alfian-maulana-76656b282/" target="_blank">
+              <img src={Linkedin} alt="Linkedinlogo" className="md:w-9 w-6" />
+            </motion.a>
+            <motion.a variants={socialMediaVariants} href="https://www.instagram.com/alfianmnaa/" target="_blank">
+              <img src={IGLogo} alt="Instagramlogo" className="md:w-9 w-6" />
+            </motion.a>
+            <motion.a variants={socialMediaVariants} href="https://www.tiktok.com/@webwizardrycode" target="_blank">
+              <img src={TiktokLogo} alt="Tiktoklogo" className="md:w-9 w-6" />
+            </motion.a>
           </motion.div>
         </>
         <motion.div className="absolute z-20 bottom-0 whitespace-nowrap md:text-[40vh] text-[30vh]  text-[#ffffff09] font-bold overflow-y-hidden leading-none" variants={sliderVariants} initial="initial" animate="animate">

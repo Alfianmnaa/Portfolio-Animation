@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import emailjs from "@emailjs/browser";
+import toast, { Toaster } from "react-hot-toast";
 
 const variants = {
   initial: {
@@ -20,24 +21,22 @@ const variants = {
 const Contact = () => {
   const ref = useRef();
   const formRef = useRef();
-  const [error, setError] = useState(false);
-  const [success, setSuccess] = useState(false);
 
   const isInView = useInView(ref, { margin: "-100px" });
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm("service_4x5sedb", "template_v10u2oh", formRef.current, "pX_2hasGmGcuvjXIW").then(
+    emailjs.sendForm("service_4x5sedb", "template_nqwgmwa", formRef.current, "Zy970IpE-_bDvpKId").then(
       (result) => {
-        setSuccess(true);
+        toast.success("Message successfully sent");
       },
       (error) => {
-        setError(true);
+        toast.error("Message failed to be sent");
       }
     );
   };
-
+  const rows = innerWidth > 768 ? 8 : 4;
   return (
     <motion.div ref={ref} className="h-full max-w-[1336px] md:w-auto w-full md:p-0 p-3 flex items-center md:gap-12 gap-6 md:flex-row flex-col m-auto " variants={variants} initial="initial" whileInView="animate">
       <motion.div className="flex-1 flex flex-col md:gap-10 gap-5 md:text-start text-center md:items-start items-center md:mt-0 mt-16" variants={variants}>
@@ -57,7 +56,7 @@ const Contact = () => {
           <span className="font-light">+6281326022762</span>
         </motion.div>
       </motion.div>
-      <div className="phonesvg overflow-hidden flex-1 relative md:p-0 px-6 md:w-auto w-full">
+      <div className="phonesvg md:overflow-visible overflow-hidden flex-1 relative md:p-0 px-6 md:w-auto w-full">
         <motion.div className=" stroke-orange-400 absolute m-auto -z-10" initial={{ opacity: 1 }} whileInView={{ opacity: 0 }} transition={{ delay: 3, duration: 1 }}>
           <svg width="450px" height="450px" viewBox="0 0 32.666 32.666">
             <motion.path
@@ -85,10 +84,9 @@ const Contact = () => {
         <motion.form ref={formRef} onSubmit={sendEmail} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ delay: 4, duration: 1 }} className="flex flex-col gap-5">
           <input type="text" required placeholder="Name" name="name" className="md:p-4 p-3 bg-transparent border-[1px] border-white text-white rounded-md" />
           <input type="email" required placeholder="Email" name="email" className="md:p-4 p-3 bg-transparent border-[1px] border-white text-white rounded-md" />
-          <textarea placeholder="Message" name="message" className="md:p-4 p-3 bg-transparent border-[1px] border-white text-white rounded-md md:rows-8 rows-6" />
+          <textarea rows={rows} placeholder="Message" name="message" className="md:p-4 p-3 bg-transparent border-[1px] border-white text-white rounded-md " />
           <button className="md:p-4 p-3 text-black border-none bg-orange-400 cursor-pointer font-medium rounded-md">Submit</button>
-          {error && "Error"}
-          {success && "Success"}
+          <Toaster />
         </motion.form>
       </div>
     </motion.div>
